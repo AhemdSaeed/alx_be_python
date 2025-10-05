@@ -28,3 +28,10 @@ class TestSimpleCalculator(unittest.TestCase):
 
     def test_division(self):
         """Test the division method."""
+        self.assertEqual(self.calc.divide(10, 2), 5)
+        self.assertEqual(self.calc.divide(-10, -2), 5)
+        self.assertEqual(self.calc.divide(-10, 2), -5)
+        self.assertIsNone(self.calc.divide(10, 0))
+
+if __name__ == "__main__":
+    unittest.main()
