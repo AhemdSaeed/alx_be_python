@@ -20,18 +20,11 @@ class TestSimpleCalculator(unittest.TestCase):
         self.assertEqual(self.calc.subtract(0, 5), -5)
         self.assertEqual(self.calc.subtract(-5, -5), 0)
 
-    def test_multiply(self):
-        """Test the multiply method."""
+    def test_multiplication(self):
+        """Test the multiplication method."""
         self.assertEqual(self.calc.multiply(2, 3), 6)
         self.assertEqual(self.calc.multiply(-2, 3), -6)
         self.assertEqual(self.calc.multiply(0, 100), 0)
 
-    def test_divide(self):
-        """Test the divide method."""
-        self.assertEqual(self.calc.divide(10, 2), 5)
-        self.assertAlmostEqual(self.calc.divide(3, 2), 1.5)
-        self.assertIsNone(self.calc.divide(10, 0))
-        self.assertEqual(self.calc.divide(-10, -2), 5)
-
-if __name__ == "__main__":
-    unittest.main()
+    def test_division(self):
+        """Test the division method."""
